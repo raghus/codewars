@@ -19,7 +19,6 @@ def solve(m)
   minus_b_term = (2*m)+1
   root_term = Math.sqrt((4*m) + 1)
   two_a_term = (2*m)
-  puts "#{minus_b_term}, #{root_term}, #{two_a_term}"
   return (minus_b_term - root_term)/two_a_term
-  
+
 end
