@@ -12,9 +12,11 @@ def pendulum(values)
   # the idea is to alternately place even index-ed elements at the beginning of the array
   # and the odd index-ed elements to the end of the array - as prescribed
   # we do this with the ternary for all values of the (sorted) values array
-  # iterate with index so we can .even? to decide to prefix/postfix each element
+  # we iterate with index so we can ternary a .even? to decide to prepend/append each element
+  # prepend (or unshift) adds to the beginning of the array 
+  # append (or push) add to the end of the array
   values.each_with_index do |value,index|
-    index.even? ? poetry.unshift(value) : poetry.append(value) # prefix/postfix as needed
+    index.even? ? poetry.prepend(value) : poetry.append(value) # prepend/append as desired
   end
 
   # all done. return it
