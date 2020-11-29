@@ -3,7 +3,7 @@
 
 require 'prime' # include the Ruby library
 def solve(n)
-  i = 0 
+  i = 0 # so that the first check will return the # if it is already a prime
   while true 
     # decrease i by 1 and return it if n-1 is a prime
     return (n-i) if (n-i).prime?
