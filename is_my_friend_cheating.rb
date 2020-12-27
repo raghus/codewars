@@ -9,11 +9,11 @@ def removNb(n)
   # So for each a from 1..n we see if we get its 'twin' b that is 
   # a) an integer and b) below n and we're done!
   # Since there could be more than one answer we dont return immediately
-  # Rather we stuff it into an array that we reutn at the very end.
+  # Instead, we stuff it into an array that we reutn at the very end.
   result = []
   sigma = n*(n+1)/2
   (1..n).each do |i|
-    twin = 1.0*(sigma - i)/(i+1)
+    twin = 1.0*(sigma - i)/(i+1) # the 1.0 to force an actual division vs rounding
     if twin < n && (twin.to_int == twin)
       result << [i,twin]
     end
